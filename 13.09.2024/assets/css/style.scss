@@ -1,0 +1,206 @@
+$btn_color: #FF7400;
+$font_text-color: #653663;
+$font_title-color: #D67E34;
+
+@font-face {
+    font-family: Opensans;
+    src: url(../fonts/OpenSans_Condensed-Bold.ttf);
+    font-weight: 700;}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans_Condensed-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Tinos;
+    src: url(..font/OpenSans-refular.ttf);
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: 0;
+}
+
+.cotainer{
+    max-width: 1110px;
+    margin: 0 auto;
+    @media (max-width: 1025px) {
+        max-width: unset;
+        padding: 0 10px;
+    }
+    margin: 0 auto;
+    @media (max-width: 500px) {
+        padding: 0 14px;
+    }
+}
+
+.btn{
+    background-color: $btn_color;
+    color: #fff;
+    font-family: opensans;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 18px;
+}
+
+.main{
+    background: url(../img/bg_main.png) no-repeat center center/cover;
+
+    &__block{
+        max-width: 480px ;
+    }
+
+    &__subtitle{
+        font-family: Tinos;
+        font-weight: 400;
+        color: $font_title-color;
+        font-size: 50px;
+    }
+
+    &__title{
+        color: $font_title-color;
+        font-size: 80px;
+        font-family: Tinos;
+        font-weight: 400;
+    }
+
+}
+
+.header{
+    padding: 50px;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+    }
+
+
+    &__logo{
+        width: 100px;
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 863px){
+            width: 75px;
+        }
+        @media (max-width: 749px){
+            width: 55px;
+        }
+        @media (max-width: 749px){
+            width: 45px;
+        }
+    }
+    &__burger{
+        display: none;
+        @media (max-width: 749px){
+            display: none;
+        }
+    }
+
+    &__block{
+        display: flex;
+        align-items: center;
+        @media (max-width: 749px){
+            display: none;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        gap: 23px;
+        margin-right: 36px;
+        @media (max-width: 863px) {
+            margin-right: 25px;
+        }
+    }
+
+    &__link{
+        font-family: opensans;
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff;
+        &:hover{
+            color: $font_text-color;
+        }
+        @media (max-width: 863px) {
+            font-size: 12px;
+            font-weight: 400px;
+        }
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        @media (max-width: 863px){
+            margin-right: 25px;
+        }
+    }
+
+    &__cart{
+        border-right: 1px solid #fff;
+        padding: 17px 21px 17px 0;
+        margin-right: 34px;
+        @media (max-width: 863px){
+            margin-right: 20px;
+        }
+    }
+
+    &__phone{
+        &__link{
+            font-family: Opensans;
+            font-weight: 700;
+            font-size: 18px;
+            color: #fff;
+            display: flex;
+            gap: 8px;
+            &::before{
+                content: '';
+                background: url(../img/phone.svg);
+                display: block;
+                width: 23px;
+                height: 23px;
+            }
+            @media (max-width: 863px) {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        
+        &-text{
+            font-family: opensans;
+            font-weight: 400;
+            font-size: 14px;
+            color: #fff;
+            max-width: 155px;
+        }
+    }
+}
+    &__btn{
+        @media (max-width: 863px){
+        text-align: center;
+    }
+}
+}
+
+.history{
+    &__card{
+        width: 349px;
+        height: 328px;
+        box-shadow: 10px 10px 40px rgba(0,0,0,0);
+        padding-top: 48px 40px 20px 40px;
+        display: flex;
+        align-items: center;
+    }
+}
